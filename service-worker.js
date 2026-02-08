@@ -1,11 +1,11 @@
 // A Dull Moment - Service Worker
 const CACHE_NAME = 'a-dull-moment-v1';
 const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/app.js',
-    '/manifest.json'
+    '/adullmoment/',
+    '/adullmoment/index.html',
+    '/adullmoment/styles.css',
+    '/adullmoment/app.js',
+    '/adullmoment/manifest.json'
 ];
 
 // Install event - cache core assets
@@ -72,7 +72,7 @@ self.addEventListener('fetch', (event) => {
                     .catch(() => {
                         // Return a fallback for navigation requests
                         if (event.request.mode === 'navigate') {
-                            return caches.match('/index.html');
+                            return caches.match('/adullmoment/index.html');
                         }
                         return null;
                     });
