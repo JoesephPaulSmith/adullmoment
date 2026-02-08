@@ -283,7 +283,7 @@
         const rrule = recurrenceToRRule(recurrence);
 
         const title = 'A Dull Moment';
-        const description = 'Take a moment to pause and reflect. Open A Dull Moment to view your chosen image.';
+        const description = 'Take a moment to pause and reflect. Open A Dull Moment to view your chosen image: https://joesephpaulsmith.github.io/adullmoment/';
 
         switch (type) {
             case 'google': {
