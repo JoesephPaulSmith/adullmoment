@@ -20,6 +20,7 @@
     const previewImage = document.getElementById('preview-image');
     const actionButtons = document.getElementById('action-buttons');
     const calendarModal = document.getElementById('calendar-modal');
+    const aboutModal = document.getElementById('about-modal');
 
     // Buttons
     const btnClose = document.getElementById('btn-close');
@@ -28,8 +29,10 @@
     const fileInput = document.getElementById('file-input');
     const btnOk = document.getElementById('btn-ok');
     const btnCancel = document.getElementById('btn-cancel');
+    const btnAbout = document.getElementById('btn-about');
     const btnAddReminder = document.getElementById('btn-add-reminder');
     const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnCloseAbout = document.getElementById('btn-close-about');
 
     // Form inputs
     const reminderTime = document.getElementById('reminder-time');
@@ -62,6 +65,7 @@
         btnClose.addEventListener('click', handleClose);
         btnChangeImage.addEventListener('click', showSelectionMode);
         btnCalendar.addEventListener('click', showCalendarModal);
+        btnAbout.addEventListener('click', showAboutModal);
 
         // Selection mode interactions
         fileInput.addEventListener('change', handleFileSelect);
@@ -74,6 +78,14 @@
         calendarModal.addEventListener('click', (e) => {
             if (e.target === calendarModal) {
                 hideCalendarModal();
+            }
+        });
+
+        // About modal interactions
+        btnCloseAbout.addEventListener('click', hideAboutModal);
+        aboutModal.addEventListener('click', (e) => {
+            if (e.target === aboutModal) {
+                hideAboutModal();
             }
         });
 
@@ -253,6 +265,16 @@
 
     function hideCalendarModal() {
         calendarModal.classList.add('hidden');
+    }
+
+    function showAboutModal(e) {
+        e.stopPropagation();
+        hideOverlay();
+        aboutModal.classList.remove('hidden');
+    }
+
+    function hideAboutModal() {
+        aboutModal.classList.add('hidden');
     }
 
     function recurrenceToRRule(recurrence) {

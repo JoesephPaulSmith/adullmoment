@@ -11,6 +11,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Picture Display Mode -->
@@ -40,6 +41,13 @@
                     <line x1="16" y1="2" x2="16" y2="6"></line>
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                     <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </button>
+            <button id="btn-about" class="overlay-btn" aria-label="About this app">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <circle cx="12" cy="8" r="0.5" fill="currentColor"></circle>
                 </svg>
             </button>
         </div>
@@ -111,6 +119,19 @@
             <div class="modal-buttons">
                 <button id="btn-add-reminder" class="btn btn-confirm">Add Reminder</button>
                 <button id="btn-close-modal" class="btn btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal hidden">
+        <div class="modal-content about-content">
+            <h2>A Dull Moment</h2>
+            <p>We are endlessly bombarded by streams of information from news, social media, and more. This app is a simple interruption to that stream — a moment to step back, breathe, and settle down.</p>
+            <p>Choose an image that matters to you, schedule a reminder, and when it goes off, take a few minutes to just look at it. No feeds, no notifications, no noise. Just a dull moment.</p>
+            <p class="about-link">Made by <a href="https://jpthesmithe.com" target="_blank" rel="noopener noreferrer">jpthesmithe.com</a></p>
+            <div class="modal-buttons">
+                <button id="btn-close-about" class="btn btn-cancel">Close</button>
             </div>
         </div>
     </div>

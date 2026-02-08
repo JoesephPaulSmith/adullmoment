@@ -136,6 +136,12 @@ body {
     margin-bottom: 16px;
 }
 
+#btn-about {
+    bottom: env(safe-area-inset-bottom, 16px);
+    right: 16px;
+    margin-bottom: 16px;
+}
+
 /* =====================
    Selection Mode Styles
    ===================== */
@@ -341,6 +347,29 @@ body {
     padding: 12px 20px;
 }
 
+/* About Modal */
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.about-content .about-link {
+    margin-bottom: 0;
+}
+
+.about-content a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.about-content a:hover,
+.about-content a:focus {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
 /* =====================
    Responsive Adjustments
    ===================== */
@@ -368,6 +397,10 @@ body {
         left: 24px;
     }
 
+    #btn-about {
+        right: 24px;
+    }
+
     .selection-container h1 {
         font-size: 2.5rem;
     }
@@ -380,7 +413,8 @@ body {
         margin-top: max(16px, env(safe-area-inset-top));
     }
 
-    #btn-calendar {
+    #btn-calendar,
+    #btn-about {
         margin-bottom: max(16px, env(safe-area-inset-bottom));
     }
 }
