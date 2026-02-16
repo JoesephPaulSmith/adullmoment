@@ -324,7 +324,8 @@
 
     function createGoogleCalendarUrl(title, description, start, end, rrule) {
         const formatGoogleDate = (date) => {
-            return date.toISOString().replace(/-|:|\.\d{3}/g, '');
+            const pad = (n) => String(n).padStart(2, '0');
+            return `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}${pad(date.getSeconds())}`;
         };
 
         const params = new URLSearchParams({
@@ -340,7 +341,8 @@
 
     function downloadICalFile(title, description, start, end, rrule) {
         const formatICalDate = (date) => {
-            return date.toISOString().replace(/-|:|\.\d{3}/g, '').slice(0, -1);
+            const pad = (n) => String(n).padStart(2, '0');
+            return `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}${pad(date.getSeconds())}`;
         };
 
         const icalContent = [
