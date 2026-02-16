@@ -1,7 +1,7 @@
 {
     "name": "A Dull Moment",
     "short_name": "Dull Moment",
-    "description": "Take a break from the information stream. Pause and reflect on what matters.",
+    "description": "Take a break from the information stream. Pause and focus on what matters.",
     "start_url": "/adullmoment/",
     "scope": "/adullmoment/",
     "display": "fullscreen",
